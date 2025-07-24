@@ -1,0 +1,45 @@
+{
+  "experiment_config": {
+    "random_seed": 42,
+    "device": "auto",
+    "data_directory": "./data",
+    "results_directory": "./results",
+    "checkpoints_directory": "./checkpoints",
+    "log_level": "INFO"
+  },
+  "training_config": {
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "base_epochs": 6,
+    "finetune_epochs": 2,
+    "optimizer": "Adam",
+    "weight_decay": 1e-4
+  },
+  "dataset_config": {
+    "dataset": "MNIST",
+    "train_digits": [0, 1, 2, 3],
+    "test_digits": [0, 1, 2, 3, 4, 5],
+    "target_digit": 4,
+    "normalization": {
+      "mean": [0.1307],
+      "std": [0.3081]
+    }
+  },
+  "architecture_config": {
+    "same_architecture": "BaseNN",
+    "cross_architectures": ["WideNN", "DeepNN", "BottleneckNN", "PyramidNN"],
+    "dropout_rate": 0.5
+  },
+  "method_configs": {
+    "method1": {
+      "concept_dimensions": [32, 48, 64],
+      "sparsity_weights": [0.030, 0.050, 0.080],
+      "injection_strengths": [0.4]
+    },
+    "method2": {
+      "alignment_types": ["nonlinear", "procrustes"],
+      "hidden_dimensions": [128],
+      "alignment_epochs": 50
+    }
+  }
+}

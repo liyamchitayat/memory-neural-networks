@@ -1,0 +1,103 @@
+# EXPERIMENTAL RESULTS ANALYSIS
+
+## Performance Summary by Method
+
+### Method 1 - Precomputed Vector Space Alignment
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 13
+- Transfer (digit-4): Best: 56.1%, Median: 43.2%, Average: 40.2%
+- Preservation (0-3): Best: 98.2%, Median: 93.4%, Average: 94.4%
+- Specificity (digit-5): Best: 4.9%, Median: 7.2%, Average: 7.2%
+
+**Cross Architecture**: No experiments conducted
+
+### Method 2 - Cross-Architecture Neural Alignment
+
+**Same Architecture**: No experiments conducted
+
+**Cross Architecture Models (6-8 epochs training):**
+- Experiments: 25
+- Transfer (digit-4): Best: 42.2%, Median: 31.7%, Average: 31.6%
+- Preservation (0-3): Best: 98.7%, Median: 95.7%, Average: 95.4%
+- Specificity (digit-5): Best: 5.1%, Median: 8.0%, Average: 7.6%
+
+### Method 3 - Concept Dimension Scaling
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 27
+- Transfer (digit-4): Best: 56.1%, Median: 31.6%, Average: 35.0%
+- Preservation (0-3): Best: 99.8%, Median: 94.6%, Average: 94.5%
+- Specificity (digit-5): Best: 2.8%, Median: 7.5%, Average: 7.6%
+
+**Cross Architecture**: No experiments conducted
+
+### Method 4 - Sparsity-Based SAE Optimization
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 10
+- Transfer (digit-4): Best: 42.2%, Median: 38.4%, Average: 33.7%
+- Preservation (0-3): Best: 100.0%, Median: 96.5%, Average: 96.2%
+- Specificity (digit-5): Best: 4.2%, Median: 7.4%, Average: 7.3%
+
+**Cross Architecture**: No experiments conducted
+
+### Method 5 - Hierarchical Concept Transfer
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 5
+- Transfer (digit-4): Best: 39.5%, Median: 34.0%, Average: 33.6%
+- Preservation (0-3): Best: 98.8%, Median: 98.5%, Average: 97.5%
+- Specificity (digit-5): Best: 7.9%, Median: 10.8%, Average: 10.7%
+
+**Cross Architecture**: No experiments conducted
+
+### Other - Adversarial Concept Training
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 5
+- Transfer (digit-4): Best: 31.3%, Median: 27.6%, Average: 27.3%
+- Preservation (0-3): Best: 97.5%, Median: 96.9%, Average: 96.9%
+- Specificity (digit-5): Best: 5.9%, Median: 9.4%, Average: 8.9%
+
+**Cross Architecture**: No experiments conducted
+
+### Other - Baseline Cross-Architecture Transfer
+
+**Same Architecture**: No experiments conducted
+
+**Cross Architecture Models (6-8 epochs training):**
+- Experiments: 8
+- Transfer (digit-4): Best: 26.3%, Median: 19.3%, Average: 19.5%
+- Preservation (0-3): Best: 96.1%, Median: 94.8%, Average: 94.1%
+- Specificity (digit-5): Best: 3.7%, Median: 6.7%, Average: 7.2%
+
+### Other - Continual Concept Learning
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 7
+- Transfer (digit-4): Best: 35.8%, Median: 34.0%, Average: 32.3%
+- Preservation (0-3): Best: 98.1%, Median: 94.8%, Average: 93.6%
+- Specificity (digit-5): Best: 4.3%, Median: 9.0%, Average: 8.9%
+
+**Cross Architecture**: No experiments conducted
+
+### Other - Multi-Concept Vector Transfer
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 5
+- Transfer (digit-4): Best: 35.4%, Median: 29.0%, Average: 27.8%
+- Preservation (0-3): Best: 95.9%, Median: 95.2%, Average: 94.9%
+- Specificity (digit-5): Best: 6.2%, Median: 8.7%, Average: 8.9%
+
+**Cross Architecture**: No experiments conducted
+
+### Other - Universal SAE Concepts
+
+**Same Architecture Models (6-8 epochs training):**
+- Experiments: 4
+- Transfer (digit-4): Best: 18.1%, Median: 17.5%, Average: 17.5%
+- Preservation (0-3): Best: 101.6%, Median: 98.4%, Average: 99.1%
+- Specificity (digit-5): Best: 8.3%, Median: 8.5%, Average: 8.9%
+
+**Cross Architecture**: No experiments conducted
