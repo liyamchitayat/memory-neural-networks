@@ -41,78 +41,91 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-# Function to detect Python version
-detect_python() {
-    if command_exists python3; then
-        PYTHON_CMD="python3"
-        PYTHON_VERSION=$(python3 --version 2>&1 | cut -d' ' -f2)
-        print_success "Python 3 found: $PYTHON_VERSION"
+# Function to detect conda
+detect_conda() {
+    if command_exists conda; then
+        CONDA_VERSION=$(conda --version 2>&1)
+        print_success "Conda found: $CONDA_VERSION"
         return 0
-    elif command_exists python; then
-        PYTHON_VERSION=$(python --version 2>&1 | cut -d' ' -f2)
-        if [[ $PYTHON_VERSION == 3.* ]]; then
-            PYTHON_CMD="python"
-            print_success "Python 3 found: $PYTHON_VERSION"
-            return 0
-        else
-            print_error "Python 2 detected: $PYTHON_VERSION. Need Python 3.8+"
-            return 1
-        fi
     else
-        print_error "Python not found. Please install Python 3.8+"
+        print_error "Conda not found. Please install Anaconda or Miniconda"
+        print_info "Download from: https://docs.conda.io/en/latest/miniconda.html"
+        print_info "Or install with: curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh && bash Miniconda3-latest-MacOSX-x86_64.sh"
         return 1
     fi
 }
 
-# Function to setup virtual environment
-setup_virtual_environment() {
-    print_header "SETTING UP VIRTUAL ENVIRONMENT"
+# Function to setup conda environment
+setup_conda_environment() {
+    print_header "SETTING UP CONDA ENVIRONMENT"
     
-    # Create virtual environment if it doesn't exist
-    if [ ! -d "venv" ]; then
-        print_info "Creating virtual environment..."
-        $PYTHON_CMD -m venv venv
-        print_success "Virtual environment created"
+    ENV_NAME="neural_transfer"
+    
+    # Initialize conda for bash if needed
+    if [ -f "$(conda info --base)/etc/profile.d/conda.sh" ]; then
+        source "$(conda info --base)/etc/profile.d/conda.sh"
     else
-        print_info "Virtual environment already exists"
+        print_error "Could not find conda initialization script"
+        return 1
     fi
     
-    # Activate virtual environment
-    print_info "Activating virtual environment..."
-    source venv/bin/activate
+    # Check if environment already exists
+    if conda env list | grep -q "^${ENV_NAME} "; then
+        print_warning "Conda environment '${ENV_NAME}' already exists"
+        print_info "Removing existing environment to ensure clean setup..."
+        conda env remove -n $ENV_NAME -y
+    fi
     
-    # Upgrade pip
-    print_info "Upgrading pip..."
-    pip install --upgrade pip
+    # Create new conda environment with Python 3.9
+    print_info "Creating conda environment '${ENV_NAME}' with Python 3.9..."
+    conda create -n $ENV_NAME python=3.9 -y
     
-    print_success "Virtual environment ready"
+    if [ $? -ne 0 ]; then
+        print_error "Failed to create conda environment"
+        return 1
+    fi
+    
+    # Activate environment
+    print_info "Activating conda environment '${ENV_NAME}'..."
+    conda activate $ENV_NAME
+    
+    # Verify activation
+    if [[ "$CONDA_DEFAULT_ENV" == "$ENV_NAME" ]]; then
+        print_success "Conda environment '$ENV_NAME' activated successfully"
+        PYTHON_CMD="python"
+        
+        # Show Python version
+        PYTHON_VERSION=$(python --version 2>&1)
+        print_info "Using Python: $PYTHON_VERSION"
+    else
+        print_error "Failed to activate conda environment"
+        print_info "Current environment: $CONDA_DEFAULT_ENV"
+        return 1
+    fi
+    
+    print_success "Conda environment ready"
 }
 
 # Function to install dependencies
 install_dependencies() {
     print_header "INSTALLING DEPENDENCIES"
     
-    # Create requirements.txt if it doesn't exist
-    if [ ! -f "requirements.txt" ]; then
-        print_info "Creating requirements.txt..."
-        cat > requirements.txt << EOF
-torch>=1.12.0
-torchvision>=0.13.0
-numpy>=1.21.0
-scipy>=1.7.0
-matplotlib>=3.5.0
-scikit-learn>=1.1.0
-pandas>=1.4.0
-tqdm>=4.64.0
-jupyter>=1.0.0
-ipykernel>=6.15.0
-EOF
-        print_success "Requirements.txt created"
+    # Install PyTorch with conda (more reliable)
+    print_info "Installing PyTorch and related packages with conda..."
+    conda install pytorch torchvision cpuonly -c pytorch -y
+    
+    if [ $? -ne 0 ]; then
+        print_warning "Conda PyTorch installation failed, trying pip..."
+        pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
     fi
     
-    # Install dependencies
-    print_info "Installing Python packages..."
-    pip install -r requirements.txt
+    # Install other dependencies with conda where possible
+    print_info "Installing scientific computing packages..."
+    conda install numpy scipy matplotlib scikit-learn pandas tqdm -y
+    
+    # Install remaining packages with pip
+    print_info "Installing additional packages with pip..."
+    pip install jupyter ipykernel notebook seaborn Pillow pytest black flake8
     
     # Verify installations
     print_info "Verifying installations..."
@@ -442,8 +455,17 @@ Results: Real trained models achieving selective concept transfer while preservi
 main() {
     print_header "NEURAL CONCEPT TRANSFER - COMPLETE SETUP AND REAL EXPERIMENTS"
     
+    # Step 0: Detect conda FIRST before any user interaction
+    print_header "CONDA DETECTION"
+    if ! detect_conda; then
+        print_error "Conda setup failed. Please install Anaconda/Miniconda and try again."
+        print_info "This script requires conda to properly manage dependencies."
+        exit 1
+    fi
+    
+    echo ""
     echo "This script will:"
-    echo "1. ✅ Set up complete Python environment with PyTorch"
+    echo "1. ✅ Set up conda environment with PyTorch and all dependencies"
     echo "2. 🧪 Run real experiments with actual model training"
     echo "3. 📊 Compare SAE integration vs rho blending approaches"
     echo "4. 📝 Generate comprehensive results and reports"
@@ -459,13 +481,8 @@ main() {
         exit 0
     fi
     
-    # Step 1: Environment setup
-    if ! detect_python; then
-        print_error "Python setup failed. Please install Python 3.8+ and try again."
-        exit 1
-    fi
-    
-    setup_virtual_environment
+    # Step 1: Environment setup (conda already detected)
+    setup_conda_environment
     install_dependencies
     prepare_data
     
@@ -521,6 +538,9 @@ main() {
     echo "   • Scale to full 20-pair experiments"
     echo "   • Test on additional datasets"
     echo "   • Explore cross-architecture transfer"
+    echo ""
+    print_info "💡 To reactivate environment later:"
+    echo "   conda activate neural_transfer"
     
     echo ""
     print_success "Framework ready for production use! 🏆"

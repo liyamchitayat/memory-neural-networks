@@ -132,17 +132,33 @@ python create_parameter_visualization.py  # Parameter effects
 
 ## 🔧 Requirements
 
-### Python Environment
-```bash
-# Automatic setup (recommended)
-bash setup_and_run_real_experiments.sh
+### Prerequisites
+- **Anaconda or Miniconda** (required for environment management)
+  - Download: https://docs.conda.io/en/latest/miniconda.html
+  - The setup script will create a clean conda environment with all dependencies
 
-# Manual setup
-pip install -r requirements.txt
+### Automatic Setup (Recommended)
+```bash
+# This will create conda environment and install everything
+bash setup_and_run_real_experiments.sh
 ```
 
-### Key Dependencies
-- PyTorch >= 1.12.0
+### Manual Setup (if needed)
+```bash
+# Create conda environment
+conda create -n neural_transfer python=3.9 -y
+conda activate neural_transfer
+
+# Install PyTorch
+conda install pytorch torchvision cpuonly -c pytorch -y
+
+# Install other dependencies
+conda install numpy scipy matplotlib scikit-learn pandas tqdm -y
+pip install jupyter ipykernel notebook
+```
+
+### Key Dependencies (auto-installed)
+- PyTorch >= 1.12.0 (with CPU support)
 - NumPy >= 1.21.0  
 - SciPy >= 1.7.0
 - Matplotlib >= 3.5.0
@@ -170,9 +186,31 @@ This work demonstrates selective neural concept transfer while preserving origin
 
 ## 🏁 Getting Started
 
-1. **Clone the repository**
-2. **Run real experiments**: `bash setup_and_run_real_experiments.sh`
-3. **Review results** in `experiment_results/`
-4. **Explore alternatives** in `sae_integration_experiment/`
+### Prerequisites
+1. **Install Anaconda/Miniconda** from https://docs.conda.io/en/latest/miniconda.html
+2. **Clone this repository**
+
+### Run Experiments
+```bash
+# Automatic setup and real experiments (recommended)
+bash setup_and_run_real_experiments.sh
+
+# This will:
+# - Create 'neural_transfer' conda environment
+# - Install all dependencies (PyTorch, etc.)
+# - Train actual neural networks
+# - Generate real performance results
+```
+
+### Review Results
+- **Main results**: `experiment_results/`
+- **Integration comparison**: `sae_integration_experiment/results/`
+- **Documentation**: All `.md` files
+
+### Reactivate Environment Later
+```bash
+conda activate neural_transfer
+# Now you can run any Python scripts
+```
 
 The system is ready for production use and provides a complete framework for neural concept transfer! 🚀

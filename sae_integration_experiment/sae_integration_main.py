@@ -553,6 +553,10 @@ if __name__ == "__main__":
     print("🚀 Starting SAE Direct Integration Experiment...")
     print("This experiment tests architectural alternatives to rho blending")
     print("Results will be saved in sae_integration_experiment/results/")
+    print("")
+    print("⚠️  Make sure you're in the 'neural_transfer' conda environment:")
+    print("   conda activate neural_transfer")
+    print("")
     
     results = run_sae_integration_experiment()
     

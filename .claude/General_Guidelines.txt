@@ -3,7 +3,7 @@ This document details the overarching conditions of all experiments, and the nex
 given the project definition inf project_objectives.md, run the following experiments 
 
 General guidlines 
-- 
+- whenever you are making simulated data- make sure you are writting in the title that it is simulated
 - make sure to have a compresensive readme.md document that explain all of the expeeriments and all of the runs
 - this should be sufficeintly well detailed to the degree that any programmer should be able to reproduce the results even without access to any of the code other than the readme
 - whenever possible, make sure to use the same seed for all of the runs, and make sure to store the seed in the readme
