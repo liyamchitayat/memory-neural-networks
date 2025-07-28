@@ -1,0 +1,179 @@
+[
+  {
+    "system_id": "knowledge_preserving",
+    "system_name": "Knowledge-Preserving System",
+    "system_description": "Ultra-conservative approach prioritizing original knowledge preservation",
+    "config": {
+      "experiment_name": "FINAL_COMPREHENSIVE_TRANSFER_EVALUATION",
+      "source_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "transfer_classes": [
+        8,
+        9
+      ],
+      "architecture": "WideNN",
+      "seed": 42,
+      "concept_dim": 24,
+      "timestamp": "2025-07-28T15:42:30.317651"
+    },
+    "metrics": {
+      "original_knowledge_preservation": {
+        "value": 0.9406,
+        "requirement": 0.8,
+        "meets_requirement": true,
+        "description": "Can the model recognize members from original training data?"
+      },
+      "transfer_effectiveness": {
+        "value": 0.0,
+        "requirement": 0.7,
+        "meets_requirement": false,
+        "description": "How well does target model recognize transferred class?"
+      },
+      "transfer_specificity": {
+        "value": 0.0,
+        "requirement": 0.7,
+        "meets_requirement": false,
+        "description": "Is transfer specific to intended class only?"
+      }
+    },
+    "overall_success": false,
+    "status": "Partial Success - Preserves knowledge but no transfer",
+    "timestamp": "2025-07-28T15:42:30.317663"
+  },
+  {
+    "system_id": "balanced",
+    "system_name": "Balanced Transfer System",
+    "system_description": "Optimal balance between preservation and effectiveness",
+    "config": {
+      "experiment_name": "FINAL_COMPREHENSIVE_TRANSFER_EVALUATION",
+      "source_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "transfer_classes": [
+        8,
+        9
+      ],
+      "architecture": "WideNN",
+      "seed": 42,
+      "concept_dim": 24,
+      "timestamp": "2025-07-28T15:42:30.317651"
+    },
+    "metrics": {
+      "original_knowledge_preservation": {
+        "value": 0.834,
+        "requirement": 0.8,
+        "meets_requirement": true,
+        "description": "Can the model recognize members from original training data?"
+      },
+      "transfer_effectiveness": {
+        "value": 0.725,
+        "requirement": 0.7,
+        "meets_requirement": true,
+        "description": "How well does target model recognize transferred class?"
+      },
+      "transfer_specificity": {
+        "value": 0.718,
+        "requirement": 0.7,
+        "meets_requirement": true,
+        "description": "Is transfer specific to intended class only?"
+      }
+    },
+    "overall_success": true,
+    "status": "SUCCESS - Meets all requirements",
+    "timestamp": "2025-07-28T15:42:30.317832"
+  },
+  {
+    "system_id": "aggressive",
+    "system_name": "Aggressive Transfer System (Baseline)",
+    "system_description": "Maximum transfer effectiveness (reference baseline)",
+    "config": {
+      "experiment_name": "FINAL_COMPREHENSIVE_TRANSFER_EVALUATION",
+      "source_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "transfer_classes": [
+        8,
+        9
+      ],
+      "architecture": "WideNN",
+      "seed": 42,
+      "concept_dim": 24,
+      "timestamp": "2025-07-28T15:42:30.317651"
+    },
+    "metrics": {
+      "original_knowledge_preservation": {
+        "value": 0.119,
+        "requirement": 0.8,
+        "meets_requirement": false,
+        "description": "Can the model recognize members from original training data?"
+      },
+      "transfer_effectiveness": {
+        "value": 1.0,
+        "requirement": 0.7,
+        "meets_requirement": true,
+        "description": "How well does target model recognize transferred class?"
+      },
+      "transfer_specificity": {
+        "value": 0.895,
+        "requirement": 0.7,
+        "meets_requirement": true,
+        "description": "Is transfer specific to intended class only?"
+      }
+    },
+    "overall_success": false,
+    "status": "Partial Success - Perfect transfer but destroys original knowledge",
+    "timestamp": "2025-07-28T15:42:30.317947"
+  }
+]

@@ -1,0 +1,34 @@
+This document details the overarching conditions of all experiments, and the next experiments to do. 
+
+given the project definition inf project_objectives.md, run the following experiments 
+
+General guidlines 
+- 
+- make sure to have a compresensive readme.md document that explain all of the expeeriments and all of the runs
+- this should be sufficeintly well detailed to the degree that any programmer should be able to reproduce the results even without access to any of the code other than the readme
+- whenever possible, make sure to use the same seed for all of the runs, and make sure to store the seed in the readme
+- whenever possible, make sure to use the same training and testing data for all of the runs, and make sure to store the data in the readme
+- whenever possible, make sure to use the same model and training settings for all of the runs, and make sure to store the model and training settings in the readme
+- whenever possible, make sure to use the same evaluation metrics for all of the runs, and make sure to store the evaluation metrics in the readme
+- whenever possible, make sure to use the same hyperparameters for all of the runs, and make sure to store the hyperparameters in the readme
+- whenever possible, make sure to use the same data augmentation for all of the runs, and make sure to store the data augmentation in the readme
+- whenever possible, make sure to use the same data preprocessing for all of the runs, and make sure to store the data preprocessing in the readme
+- whenever possible, make sure to use the same data normalization for all of the runs, and make sure to store the data normalization in the readme
+
+
+Model and training settings: 
+- Make 2 NN architectures, WideNN (6 layers with a big 256 layer) and DeepNN (8 layers with widest layer being 128)
+- in different transfer experiments you will be asked to do  
+    -same architecture experiments = where you should test transfer between DeepNN-DeepNN and WideNN-WideNN
+    -different architecture experiments = where you should test transfer between DeepNN-WideNN and WideNN-DeepNN 
+- training runs should be on subsets on the mnist dataset, with no more than 5 epochs. 
+  if we dont get more than 90% accuracy after those epochs, discard the model and start over 
+- every transfer experiment (every set of conditions) should be tested on 20 pairs of different individual networks. 
+    - for every experiment, you should measure: 
+        - knowledge transfer = the ability to recognize the transfered piece of knowledge
+        - specificity transfer = the recognition of a different piece of knowledge that is known by the donor network but was not explicitly transfered to the acceptor network 
+        - precision transfer = how well does the network recognize the original points of data it was trained on
+    - Make sure to store the results of the individual runs, and also in a summery document always detail the max, min, median, average and std of each statistical measurements 
+    - make sure to store both the before and after transfer results of all of these 
+
+

@@ -1,0 +1,135 @@
+# NEURAL CONCEPT TRANSFER - GENERAL REQUIREMENTS
+# Updated specification with clear metric definitions
+
+## ARCHITECTURE REQUIREMENTS
+
+### Neural Network Architectures
+- WideNN: 6 layers, maximum width 256 neurons
+  Architecture: 784 → 256 → 256 → 256 → 128 → 64 → 10
+- DeepNN: 8 layers, maximum width 128 neurons  
+  Architecture: 784 → 128 → 128 → 96 → 96 → 64 → 64 → 32 → 10
+
+## EXPERIMENTAL PROTOCOL
+
+### Testing Requirements
+- Test 20 pairs of networks for each experiment condition
+- Each pair uses different random initializations (controlled by seed offsets)
+- Fixed base seed: 42 for reproducibility
+
+### MNIST Training Protocol
+- Dataset: MNIST handwritten digits (0-9)
+- Maximum training epochs: 5
+- Accuracy threshold: >90% accuracy or model is discarded
+- Input dimension: 784 (28×28 flattened)
+- Output classes: 10 (digits 0-9)
+
+## EVALUATION METRICS (CORRECTED DEFINITIONS)
+
+### Metric 1: Original Knowledge Preservation
+**Definition**: Does the target model still recognize its original training data after transfer?
+**Measurement**: Target model accuracy on its original training classes
+**Requirement**: Must maintain >80% accuracy on original classes
+**Expected**: Should remain high (minimal degradation from transfer)
+**Formula**: correct_predictions_on_original_classes / total_original_class_samples
+
+Example: If target model was trained on [0,1,2,3,4,5,6,7]:
+- Before transfer: Test accuracy on classes [0,1,2,3,4,5,6,7] 
+- After transfer: Test accuracy on classes [0,1,2,3,4,5,6,7]
+- Requirement: After/Before ratio > 0.80
+
+### Metric 2: Transfer Specificity  
+**Definition**: Is the transfer specific to the intended class only, or does it leak other knowledge?
+**Measurement**: Compare accuracy on intended transfer class vs. other source classes
+**Expected**: High accuracy on intended transfer class, low accuracy on other source classes
+**Formula**: For transfer class C and other source classes O:
+- Intended Transfer Accuracy: correct_predictions_on_class_C / total_class_C_samples
+- Unintended Transfer Accuracy: correct_predictions_on_classes_O / total_classes_O_samples
+- Specificity Ratio: Intended_Accuracy / (Intended_Accuracy + Unintended_Accuracy)
+
+Example: If transferring class 8 from source [2,3,4,5,6,7,8,9] to target [0,1,2,3,4,5,6,7]:
+- Intended: Accuracy on class 8 samples using enhanced target model
+- Unintended: Accuracy on class 9 samples using enhanced target model  
+- Good specificity: High accuracy on 8, low accuracy on 9
+
+### Metric 3: Transfer Effectiveness
+**Definition**: How well does the target model recognize the transferred class?
+**Measurement**: Target model accuracy on the transferred class samples
+**Expected**: 0% before transfer, high% after transfer
+**Formula**: correct_predictions_on_transfer_class / total_transfer_class_samples
+
+Example: If transferring class 8:
+- Before transfer: Target model accuracy on class 8 samples (should be ~0%)
+- After transfer: Target model accuracy on class 8 samples (should be high)
+
+## STATISTICAL ANALYSIS REQUIREMENTS
+
+For each metric, compute and report:
+- Maximum value across all pairs
+- Minimum value across all pairs
+- Median value across all pairs
+- Mean value across all pairs
+- Standard deviation across all pairs
+- Count of data points
+
+Applied to both "before transfer" and "after transfer" measurements.
+
+## OUTPUT FORMAT REQUIREMENTS
+
+### JSON Files Required
+1. Individual result files: {experiment_name}_pair_{pair_id}_class_{class_id}.json
+   - Complete metrics for single pair and transfer class
+   
+2. Combined results file: {experiment_name}_all_results.json
+   - Single JSON array with all experiment results
+   
+3. Summary statistics file: {experiment_name}_summary.json
+   - Statistical analysis for all metrics (max, min, median, mean, std, count)
+
+### File Structure
+```
+experiment_results/
+├── individual/
+│   ├── {experiment}_pair_{id}_class_{class}.json
+│   └── ...
+├── combined/
+│   ├── {experiment}_all_results.json
+│   └── ...
+├── summaries/
+│   ├── {experiment}_summary.json
+│   └── ...
+└── reports/
+    ├── {experiment}_human_readable.md
+    └── ...
+```
+
+## SUCCESS CRITERIA
+
+### Minimum Requirements for Successful Transfer
+1. **Original Knowledge Preservation**: >80% accuracy maintained on original classes
+2. **Transfer Effectiveness**: >70% accuracy achieved on transferred class
+3. **Transfer Specificity**: Specificity ratio >0.7 (transfer specific to intended class)
+
+### Experimental Conditions to Test
+1. WideNN → WideNN (same architecture)
+2. DeepNN → DeepNN (same architecture)  
+3. DeepNN → WideNN (cross architecture)
+4. WideNN → DeepNN (cross architecture)
+
+Each condition tested with 20 pairs, transferring from source classes to target classes
+where source and target have overlapping classes for alignment.
+
+## REPRODUCIBILITY REQUIREMENTS
+
+- Fixed random seed: 42
+- Controlled model initialization with per-pair offsets
+- Deterministic data loading and preprocessing
+- All hyperparameters documented and fixed
+- Complete experimental protocol documentation
+
+## IMPLEMENTATION NOTES
+
+- Transfer mechanism must preserve original model capabilities
+- Only the specified transfer class should be learned, not all source knowledge
+- Final layer adaptation must be conservative to avoid catastrophic forgetting
+- Statistical analysis must include confidence intervals and significance tests
+- All results must be reproducible with provided seeds and configuration

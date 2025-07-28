@@ -1,0 +1,85 @@
+{
+  "experiment_name": "CORRECTED_WideNN_source2-9_to_target0-7",
+  "total_pairs": 2,
+  "timestamp": "2025-07-28T15:10:30.333566",
+  "config": {
+    "seed": 42,
+    "max_epochs": 5,
+    "min_accuracy_threshold": 0.9,
+    "num_pairs": 1,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "concept_dim": 24,
+    "device": "cpu",
+    "input_dim": 784,
+    "num_classes": 10,
+    "source_classes": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "target_classes": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "metrics": {
+    "knowledge_transfer": {
+      "before": {
+        "max": 0.0,
+        "min": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "count": 2
+      },
+      "after": {
+        "max": 1.0,
+        "min": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    "specificity_transfer": {
+      "before": {
+        "max": 0.9885714285714285,
+        "min": 0.9814285714285714,
+        "median": 0.985,
+        "mean": 0.985,
+        "std": 0.0035714285714285587,
+        "count": 2
+      },
+      "after": {
+        "max": 0.15357142857142858,
+        "min": 0.12,
+        "median": 0.1367857142857143,
+        "mean": 0.1367857142857143,
+        "std": 0.016785714285714293,
+        "count": 2
+      }
+    },
+    "precision_transfer": {
+      "before": {
+        "max": 0.938125,
+        "min": 0.938125,
+        "median": 0.938125,
+        "mean": 0.938125,
+        "std": 0.0,
+        "count": 2
+      },
+      "after": {
+        "max": 0.23875,
+        "min": 0.0,
+        "median": 0.119375,
+        "mean": 0.119375,
+        "std": 0.119375,
+        "count": 2
+      }
+    }
+  }
+}

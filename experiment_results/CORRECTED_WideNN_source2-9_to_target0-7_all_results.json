@@ -1,0 +1,82 @@
+[
+  {
+    "pair_id": 1,
+    "source_arch": "WideNN",
+    "target_arch": "WideNN",
+    "source_classes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "target_classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "transfer_class": 8,
+    "before_metrics": {
+      "knowledge_transfer": 0.0,
+      "specificity_transfer": 0.9885714285714285,
+      "precision_transfer": 0.938125
+    },
+    "after_metrics": {
+      "knowledge_transfer": 1.0,
+      "specificity_transfer": 0.12,
+      "precision_transfer": 0.0
+    },
+    "source_accuracy": 0.924375,
+    "target_accuracy": 0.938125,
+    "alignment_error": 0.1832074671983719,
+    "timestamp": "2025-07-28T15:09:50.758987"
+  },
+  {
+    "pair_id": 1,
+    "source_arch": "WideNN",
+    "target_arch": "WideNN",
+    "source_classes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "target_classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "transfer_class": 9,
+    "before_metrics": {
+      "knowledge_transfer": 0.0,
+      "specificity_transfer": 0.9814285714285714,
+      "precision_transfer": 0.938125
+    },
+    "after_metrics": {
+      "knowledge_transfer": 1.0,
+      "specificity_transfer": 0.15357142857142858,
+      "precision_transfer": 0.23875
+    },
+    "source_accuracy": 0.924375,
+    "target_accuracy": 0.938125,
+    "alignment_error": 0.1832074671983719,
+    "timestamp": "2025-07-28T15:10:30.332676"
+  }
+]

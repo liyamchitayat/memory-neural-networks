@@ -1,0 +1,7 @@
+
+Conditions to test 
+1. importance of shared knowledge: as the knowledgebase of the two networks, try to have 
+    - option 1: small shared knowledgebase- one network trained on numbers [0,1,2,3,4,5], and another trained on [4,5,6,7,8,9]
+    - option 2: larger shared knowledgebase one network trained on numbers [0,1,2,3,4,5,6,7], and another trained on [2,3,4,5,6,7,8,9]
+
+
