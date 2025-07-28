@@ -1,5 +1,11 @@
 #!/bin/bash
-
+#SBATCH --job-name=sae_experiment
+#SBATCH --output=logs/%x_%j.out
+#SBATCH --error=logs/%x_%j.err
+#SBATCH --time=5:59:00
+#SBATCH --gres=gpu:1
+#SBATCH --mem=64G
+#SBATCH --cpus-per-task=8
 # SAE Concept Injection Experiments - Complete Automated Setup and Execution
 # 
 # This script automatically sets up the environment and runs all experiments
