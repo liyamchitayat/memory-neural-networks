@@ -31,7 +31,7 @@
     "architecture": "WideNN",
     "seed": 42,
     "concept_dim": 24,
-    "timestamp": "2025-07-28T15:42:30.317651"
+    "timestamp": "2025-07-28T20:57:58.789402"
   },
   "metrics": {
     "original_knowledge_preservation": {
@@ -55,5 +55,5 @@
   },
   "overall_success": false,
   "status": "Partial Success - Perfect transfer but destroys original knowledge",
-  "timestamp": "2025-07-28T15:42:30.317947"
+  "timestamp": "2025-07-28T20:57:58.789775"
 }

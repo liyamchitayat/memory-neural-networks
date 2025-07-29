@@ -1,15 +1,15 @@
 {
   "experiment_type": "REAL_BALANCED_TRANSFER",
-  "timestamp": "2025-07-28T16:27:24.781678",
+  "timestamp": "2025-07-28T20:57:58.617267",
   "metrics": {
-    "original_knowledge_preservation": 0.94,
-    "transfer_effectiveness": 0.0,
-    "transfer_specificity": 0.0
+    "original_knowledge_preservation": 0.8675,
+    "transfer_effectiveness": 0.63,
+    "transfer_specificity": 0.9999999841269843
   },
   "requirements_met": {
     "preservation": true,
     "effectiveness": false,
-    "specificity": false,
+    "specificity": true,
     "all_requirements": false
   },
   "note": "These are actual measured results from trained models, not simulations"
