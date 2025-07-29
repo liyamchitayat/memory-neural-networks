@@ -1,0 +1,4 @@
+🔬 Running CLEAN rho_blending experiment (seed=456)
+   📚 Training models: Source=[2, 3, 4, 5, 6, 7], Target=[0, 1, 2, 3, 4, 5]
+   ✅ Models trained: Source=0.925, Target=0.954
+   🔄 Setting up transfer system...

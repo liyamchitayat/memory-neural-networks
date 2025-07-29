@@ -1,0 +1,90 @@
+🔬 Running rho_blending experiment (seed=456)
+   📚 Training base models...
+   ✅ Models trained: Donor=0.900, Acceptor=0.929
+   🔄 Fitting transfer system...
+   🎯 Setting up transfer for class 8...
+   📊 Measuring accuracies...
+📊 MEASURING SIMPLE ACCURACIES
+========================================
+   donor original classes: 90.0% (1440/1600)
+   donor class 8: 84.0% (168/200)
+   donor class 9: 88.5% (177/200)
+   acceptor before original classes: 72.4% (1159/1600)
+   acceptor before class 8: 68.5% (137/200)
+   acceptor before class 9: 0.0% (0/200)
+   acceptor after original classes: 68.5% (1096/1600)
+   acceptor after class 8: 79.0% (158/200)
+   acceptor after class 9: 0.0% (0/200)
+
+================================================================================
+🚨 CRITICAL WARNING: POSSIBLE DATA LEAKAGE DETECTED!
+================================================================================
+❌ Acceptor model has 68.5% accuracy on class 8 BEFORE transfer
+❌ This is above the 30% threshold, suggesting data leakage!
+
+POSSIBLE CAUSES:
+  • Class 8 samples leaked into acceptor training data
+  • Mislabeled samples (8s labeled as other digits)
+  • Data split contamination
+  • Model architecture allows high confidence guessing
+
+EXPERIMENT VALIDITY: ⚠️  RESULTS MAY BE INVALID
+Action needed: Investigate data splits and training procedure
+================================================================================
+
+
+📈 SIMPLE ACCURACY RESULTS
+============================================================
+
+| Model                    | Original Classes | Class 8  | Class 9  |
+|--------------------------|------------------|----------|----------|
+| Donor                    |          90.0% |   84.0% |   88.5% |
+| Acceptor (Before)        |          72.4% |   68.5% |    0.0% |
+| Acceptor (After)         |          68.5% |   79.0% |    0.0% |
+
+📊 KEY OBSERVATIONS:
+   • Donor should be good at 8 and 9: 84.0%, 88.5%
+   • Acceptor before should be bad at 8 and 9: 68.5%, 0.0%
+   • Transfer success if acceptor after improves on 8: 68.5% → 79.0%
+   • Transfer specificity if acceptor after stays bad at 9: 0.0%
+   • Knowledge preservation if original classes stay good: 68.5%
+   📈 Results: Class 8: 68.5% → 79.0%
+{
+  "experiment_id": "rho_blending_seed_456",
+  "approach": "rho_blending",
+  "seed": 456,
+  "timestamp": "2025-07-29T10:43:16.632889",
+  "model_accuracies": {
+    "donor": 0.9,
+    "acceptor": 0.92875
+  },
+  "simple_accuracy_results": {
+    "donor_original_accuracy": 0.9,
+    "donor_class_8_accuracy": 0.84,
+    "donor_class_9_accuracy": 0.885,
+    "acceptor_before_original_accuracy": 0.724375,
+    "acceptor_before_class_8_accuracy": 0.685,
+    "acceptor_before_class_9_accuracy": 0.0,
+    "acceptor_after_original_accuracy": 0.685,
+    "acceptor_after_class_8_accuracy": 0.79,
+    "acceptor_after_class_9_accuracy": 0.0
+  },
+  "success_criteria": {
+    "knowledge_preservation": false,
+    "transfer_effectiveness": true,
+    "transfer_specificity": true
+  },
+  "data_leakage_check": {
+    "class_8_before_transfer": 0.685,
+    "class_9_before_transfer": 0.0,
+    "data_leakage_detected": true
+  },
+  "config": {
+    "max_epochs": 5,
+    "sae_epochs": 50,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "concept_dim": 24,
+    "transfer_class": 8
+  }
+}

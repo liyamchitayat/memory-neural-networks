@@ -1,0 +1,102 @@
+INFO:experimental_framework:Created subset with 8000 samples for classes {2, 3, 4, 5, 6, 7, 8, 9}
+INFO:experimental_framework:Class distribution: {2: 1000, 3: 1000, 4: 1000, 5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}
+INFO:experimental_framework:Created subset with 8000 samples for classes {0, 1, 2, 3, 4, 5, 6, 7}
+INFO:experimental_framework:Class distribution: {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000, 5: 1000, 6: 1000, 7: 1000}
+INFO:experimental_framework:Created subset with 1600 samples for classes {2, 3, 4, 5, 6, 7, 8, 9}
+INFO:experimental_framework:Class distribution: {2: 200, 3: 200, 4: 200, 5: 200, 6: 200, 7: 200, 8: 200, 9: 200}
+INFO:experimental_framework:Created subset with 1600 samples for classes {0, 1, 2, 3, 4, 5, 6, 7}
+INFO:experimental_framework:Class distribution: {0: 200, 1: 200, 2: 200, 3: 200, 4: 200, 5: 200, 6: 200, 7: 200}
+INFO:experimental_framework:Epoch 1/5: Loss = 1.3623, Accuracy = 0.7950
+INFO:experimental_framework:Epoch 2/5: Loss = 0.6308, Accuracy = 0.8862
+INFO:experimental_framework:Epoch 3/5: Loss = 0.4738, Accuracy = 0.9000
+INFO:experimental_framework:✓ Model achieved required accuracy 0.9000 >= 0.9
+INFO:experimental_framework:Epoch 1/5: Loss = 0.6250, Accuracy = 0.9287
+INFO:experimental_framework:✓ Model achieved required accuracy 0.9287 >= 0.9
+INFO:neural_concept_transfer:Source classes S_B: {2, 3, 4, 5, 6, 7, 8, 9}
+INFO:neural_concept_transfer:Target classes S_A: {0, 1, 2, 3, 4, 5, 6, 7}
+INFO:neural_concept_transfer:Shared classes S_shared: {2, 3, 4, 5, 6, 7}
+INFO:neural_concept_transfer:Transfer classes: {8, 9}
+INFO:neural_concept_transfer:=== Fitting Neural Concept Transfer System ===
+INFO:neural_concept_transfer:Step 1: Training Sparse Autoencoders
+INFO:neural_concept_transfer:Training source SAE...
+INFO:neural_concept_transfer:SAE Epoch 0: Loss = 0.0807
+INFO:neural_concept_transfer:SAE Epoch 20: Loss = 0.0090
+INFO:neural_concept_transfer:SAE Epoch 40: Loss = 0.0077
+INFO:neural_concept_transfer:Training target SAE...
+INFO:neural_concept_transfer:SAE Epoch 0: Loss = 0.0765
+INFO:neural_concept_transfer:SAE Epoch 20: Loss = 0.0129
+INFO:neural_concept_transfer:SAE Epoch 40: Loss = 0.0116
+INFO:neural_concept_transfer:Step 2: Extracting concept centroids
+INFO:neural_concept_transfer:Class 2: 1000 samples
+INFO:neural_concept_transfer:Class 3: 1000 samples
+INFO:neural_concept_transfer:Class 4: 1000 samples
+INFO:neural_concept_transfer:Class 5: 1000 samples
+INFO:neural_concept_transfer:Class 6: 1000 samples
+INFO:neural_concept_transfer:Class 7: 1000 samples
+INFO:neural_concept_transfer:Class 8: 1000 samples
+INFO:neural_concept_transfer:Class 9: 1000 samples
+INFO:neural_concept_transfer:Class 0: 1000 samples
+INFO:neural_concept_transfer:Class 1: 1000 samples
+INFO:neural_concept_transfer:Class 2: 1000 samples
+INFO:neural_concept_transfer:Class 3: 1000 samples
+INFO:neural_concept_transfer:Class 4: 1000 samples
+INFO:neural_concept_transfer:Class 5: 1000 samples
+INFO:neural_concept_transfer:Class 6: 1000 samples
+INFO:neural_concept_transfer:Class 7: 1000 samples
+INFO:neural_concept_transfer:Step 3: Fitting Orthogonal Procrustes alignment
+INFO:neural_concept_transfer:Procrustes alignment error: 0.2562
+INFO:neural_concept_transfer:Step 4: Discovering free space
+INFO:neural_concept_transfer:Used space rank: 8, Free dimensions: 8
+INFO:neural_concept_transfer:System fitted successfully: {'alignment_error': np.float32(0.25623736), 'concept_dim': 24, 'n_shared_classes': 6, 'n_transfer_classes': 2, 'free_dimensions': 8}
+INFO:robust_balanced_transfer:Training ROBUST injection system...
+INFO:robust_balanced_transfer:ROBUST injection training for class 8
+INFO:robust_balanced_transfer:ROBUST training step 0: Loss = 5.0669
+INFO:robust_balanced_transfer:ROBUST training step 10: Loss = 4.4623
+INFO:robust_balanced_transfer:ROBUST training step 20: Loss = 4.7831
+INFO:robust_balanced_transfer:ROBUST training step 30: Loss = 4.8604
+INFO:robust_balanced_transfer:ROBUST training step 40: Loss = 4.0316
+INFO:robust_balanced_transfer:✅ ROBUST injection training completed
+INFO:robust_balanced_transfer:ROBUST adaptation for class 8
+INFO:robust_balanced_transfer:Starting ROBUST adaptation for class 8
+INFO:robust_balanced_transfer:ROBUST adaptation with 44 samples
+INFO:robust_balanced_transfer:ROBUST stage 1: lr=0.003, reg=0.05
+INFO:robust_balanced_transfer:Stage 1 Step 0: Adaptation=5.8723, Preservation=0.9626, Effectiveness=0.0000, Balanced Score=0.4000
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.4000
+INFO:robust_balanced_transfer:Stage 1 Step 5: Adaptation=4.9310, Preservation=0.9626, Effectiveness=0.0000, Balanced Score=0.4000
+INFO:robust_balanced_transfer:Stage 1 Step 10: Adaptation=3.9980, Preservation=0.9629, Effectiveness=0.0000, Balanced Score=0.4000
+INFO:robust_balanced_transfer:Stage 1 Step 15: Adaptation=3.0846, Preservation=0.9625, Effectiveness=0.0000, Balanced Score=0.4000
+INFO:robust_balanced_transfer:Stage 1 Step 20: Adaptation=2.2170, Preservation=0.9625, Effectiveness=0.0050, Balanced Score=0.4043
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.4043
+INFO:robust_balanced_transfer:ROBUST stage 2: lr=0.002, reg=0.03
+INFO:robust_balanced_transfer:Stage 2 Step 0: Adaptation=1.4453, Preservation=0.9604, Effectiveness=0.0790, Balanced Score=0.4677
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.4677
+INFO:robust_balanced_transfer:Stage 2 Step 5: Adaptation=1.0164, Preservation=0.9561, Effectiveness=0.2480, Balanced Score=0.6126
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.6126
+INFO:robust_balanced_transfer:Stage 2 Step 10: Adaptation=0.6767, Preservation=0.9406, Effectiveness=0.4950, Balanced Score=0.8243
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.8243
+INFO:robust_balanced_transfer:Stage 2 Step 15: Adaptation=0.4291, Preservation=0.7615, Effectiveness=0.8230, Balanced Score=0.9808
+INFO:robust_balanced_transfer:🎯 NEW BEST robust score: 0.9808
+INFO:robust_balanced_transfer:Stage 2 Step 20: Adaptation=0.2619, Preservation=0.5767, Effectiveness=0.9170, Balanced Score=0.8884
+INFO:robust_balanced_transfer:ROBUST stage 3: lr=0.0015, reg=0.02
+INFO:robust_balanced_transfer:Stage 3 Step 0: Adaptation=0.1558, Preservation=0.5142, Effectiveness=0.9550, Balanced Score=0.8571
+INFO:robust_balanced_transfer:Stage 3 Step 5: Adaptation=0.1041, Preservation=0.4490, Effectiveness=0.9690, Balanced Score=0.8245
+INFO:robust_balanced_transfer:Stage 3 Step 10: Adaptation=0.0701, Preservation=0.4055, Effectiveness=0.9750, Balanced Score=0.8027
+INFO:robust_balanced_transfer:Stage 3 Step 15: Adaptation=0.0489, Preservation=0.3362, Effectiveness=0.9810, Balanced Score=0.7681
+INFO:robust_balanced_transfer:Stage 3 Step 20: Adaptation=0.0359, Preservation=0.2823, Effectiveness=0.9850, Balanced Score=0.7411
+INFO:robust_balanced_transfer:ROBUST stage 4: lr=0.001, reg=0.01
+INFO:robust_balanced_transfer:Stage 4 Step 0: Adaptation=0.0278, Preservation=0.2442, Effectiveness=0.9870, Balanced Score=0.7221
+INFO:robust_balanced_transfer:Stage 4 Step 5: Adaptation=0.0211, Preservation=0.1600, Effectiveness=0.9920, Balanced Score=0.6800
+INFO:robust_balanced_transfer:Stage 4 Step 10: Adaptation=0.0164, Preservation=0.1311, Effectiveness=0.9950, Balanced Score=0.6656
+INFO:robust_balanced_transfer:Stage 4 Step 15: Adaptation=0.0131, Preservation=0.1245, Effectiveness=0.9950, Balanced Score=0.6623
+INFO:robust_balanced_transfer:Stage 4 Step 20: Adaptation=0.0109, Preservation=0.1217, Effectiveness=0.9950, Balanced Score=0.6609
+INFO:robust_balanced_transfer:ROBUST stage 5: lr=0.0008, reg=0.005
+INFO:robust_balanced_transfer:Stage 5 Step 0: Adaptation=0.0093, Preservation=0.1185, Effectiveness=0.9950, Balanced Score=0.6593
+INFO:robust_balanced_transfer:Stage 5 Step 5: Adaptation=0.0075, Preservation=0.1108, Effectiveness=0.9950, Balanced Score=0.6554
+INFO:robust_balanced_transfer:Stage 5 Step 10: Adaptation=0.0061, Preservation=0.1080, Effectiveness=0.9980, Balanced Score=0.6540
+INFO:robust_balanced_transfer:Stage 5 Step 15: Adaptation=0.0052, Preservation=0.1061, Effectiveness=0.9980, Balanced Score=0.6531
+INFO:robust_balanced_transfer:Stage 5 Step 20: Adaptation=0.0045, Preservation=0.1055, Effectiveness=0.9980, Balanced Score=0.6527
+INFO:robust_balanced_transfer:✅ ROBUST adaptation completed!
+INFO:robust_balanced_transfer:   Final Preservation: 0.7615
+INFO:robust_balanced_transfer:   Final Effectiveness: 0.8230
+INFO:robust_balanced_transfer:   Balanced Score: 0.9808
+WARNING:robust_balanced_transfer:⚠️ Partial success - some requirements not fully met

@@ -1,0 +1,101 @@
+🔬 Running CLEAN rho_blending experiment (seed=123)
+   📚 Training models: Source=[2, 3, 4, 5, 6, 7], Target=[0, 1, 2, 3, 4, 5]
+   ✅ Models trained: Source=0.925, Target=0.954
+   🔄 Setting up transfer system...
+   📊 Measuring accuracies...
+📊 MEASURING CLEAN ACCURACIES
+========================================
+   donor original classes: 92.5% (1110/1200)
+   donor class 6: 92.0% (184/200)
+   donor classes {7}: 93.5% (187/200)
+   acceptor before original classes: 71.8% (861/1200)
+   acceptor before class 6: 93.0% (186/200)
+   acceptor before classes {7}: 0.0% (0/200)
+   acceptor after original classes: 71.8% (861/1200)
+   acceptor after class 6: 93.0% (186/200)
+   acceptor after classes {7}: 0.0% (0/200)
+
+🔍 DATA LEAKAGE VALIDATION
+------------------------------
+🚨 WARNING: Acceptor has 93.0% accuracy on class 6 before transfer!
+✅ Specificity classes {7}: 0.0% ≤ 30%
+
+================================================================================
+🚨 CRITICAL WARNING: POSSIBLE DATA LEAKAGE DETECTED!
+================================================================================
+❌ Issues found with: class 6
+POSSIBLE CAUSES:
+  • Visual similarity between digits
+  • Data contamination in splits
+  • Model architecture enabling good guessing
+EXPERIMENT VALIDITY: ⚠️  RESULTS MAY BE INVALID
+================================================================================
+
+📈 CLEAN ACCURACY RESULTS
+================================================================================
+
+| Model                    | Original Classes | Class 6  | Classes [7] |
+|--------------------------|------------------|----------|------------|
+| Donor                    |          92.5% |   92.0% |     93.5% |
+| Acceptor (Before)        |          71.8% |   93.0% |      0.0% |
+| Acceptor (After)         |          71.8% |   93.0% |      0.0% |
+
+📊 KEY OBSERVATIONS:
+   • Donor trained on {0,1,2,3,4,5} should know class 6 and [7]
+   • Acceptor trained on {2,3,4,5,6,7} should NOT know class 6 or [7]
+   • Transfer success: class 6 improves from 93.0% → 93.0%
+   • Transfer specificity: classes [7] stay low at 0.0%
+   • Knowledge preservation: original classes at 71.8%
+{
+  "experiment_id": "clean_rho_blending_seed_123",
+  "approach": "rho_blending",
+  "seed": 123,
+  "timestamp": "2025-07-29T12:06:31.575769",
+  "experimental_setup": {
+    "source_classes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "target_classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "transfer_class": 6,
+    "specificity_classes": [
+      7
+    ]
+  },
+  "model_accuracies": {
+    "source": 0.925,
+    "target": 0.9541666666666667
+  },
+  "clean_accuracy_results": {
+    "donor_original_accuracy": 0.925,
+    "donor_transfer_class_accuracy": 0.92,
+    "donor_specificity_classes_accuracy": 0.935,
+    "acceptor_before_original_accuracy": 0.7175,
+    "acceptor_before_transfer_class_accuracy": 0.93,
+    "acceptor_before_specificity_classes_accuracy": 0.0,
+    "acceptor_after_original_accuracy": 0.7175,
+    "acceptor_after_transfer_class_accuracy": 0.93,
+    "acceptor_after_specificity_classes_accuracy": 0.0
+  },
+  "success_criteria": {
+    "knowledge_preservation": false,
+    "transfer_effectiveness": true,
+    "transfer_specificity": true
+  },
+  "data_leakage_check": {
+    "transfer_class_before": 0.93,
+    "specificity_classes_before": 0.0,
+    "data_leakage_detected": true
+  }
+}
