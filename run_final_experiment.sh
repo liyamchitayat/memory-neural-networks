@@ -5,8 +5,12 @@
 
 set -e
 
-echo "🧪 RUNNING FINAL NEURAL CONCEPT TRANSFER EXPERIMENT"
-echo "=================================================="
+echo "🧪 RUNNING SIMULATED NEURAL CONCEPT TRANSFER ANALYSIS"
+echo "===================================================="
+echo "⚠️  This generates simulated/theoretical results for analysis"
+echo "🚀 For REAL experiments with actual training, use:"
+echo "   bash setup_and_run_real_experiments.sh"
+echo ""
 
 # Check if Python is available
 if ! command -v python3 &> /dev/null; then
@@ -18,7 +22,7 @@ echo "✅ Python 3 found"
 
 # Run the final experiment
 echo "🚀 Starting comprehensive experiment..."
-python3 run_final_experiment.py
+python3 simulated_results/run_final_experiment.py
 
 if [ $? -eq 0 ]; then
     echo ""
