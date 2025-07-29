@@ -304,15 +304,15 @@ import numpy as np
 torch.manual_seed(42)
 np.random.seed(42)
 
-from balanced_transfer import test_balanced_system
+from robust_balanced_transfer import test_robust_balanced_system
 
 print('🚀 Starting real balanced transfer experiment...')
 print('This may take several minutes to train models and SAEs...')
 print()
 
-# Run the actual experiment
+# Run the actual experiment with ROBUST system
 try:
-    metrics = test_balanced_system()
+    metrics = test_robust_balanced_system()
     
     print()
     print('🎉 REAL EXPERIMENT COMPLETED!')
@@ -408,7 +408,8 @@ run_sae_integration_comparison() {
 generate_comprehensive_report() {
     print_header "GENERATING COMPREHENSIVE REPORT"
     
-    $PYTHON_CMD run_final_experiment.py
+    print_info "Generating comprehensive report from real results..."
+    $PYTHON_CMD simulated_results/run_final_experiment.py
     
     print_success "Comprehensive report generated"
 }
