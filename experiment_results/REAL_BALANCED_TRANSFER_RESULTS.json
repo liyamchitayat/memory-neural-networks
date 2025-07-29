@@ -1,6 +1,6 @@
 {
   "experiment_type": "REAL_BALANCED_TRANSFER",
-  "timestamp": "2025-07-28T20:57:58.617267",
+  "timestamp": "2025-07-28T21:07:14.108264",
   "metrics": {
     "original_knowledge_preservation": 0.8675,
     "transfer_effectiveness": 0.63,
