@@ -1,0 +1,339 @@
+{
+  "experiment_info": {
+    "description": "Comprehensive rho parameter analysis",
+    "total_experiments": 33,
+    "timestamp": "2025-07-29T16:13:45.604953"
+  },
+  "results": [
+    {
+      "rho": 0.0,
+      "seed": 42,
+      "preservation": 0.8211382113821138,
+      "effectiveness": 0.9428571428571428,
+      "specificity": 0.0,
+      "source_acc": 0.925,
+      "target_acc": 0.9541666666666667,
+      "timestamp": "2025-07-29T15:18:01.078516"
+    },
+    {
+      "rho": 0.0,
+      "seed": 123,
+      "preservation": 0.9758064516129032,
+      "effectiveness": 0.5714285714285714,
+      "specificity": 0.0,
+      "source_acc": 0.91,
+      "target_acc": 0.9541666666666667,
+      "timestamp": "2025-07-29T15:18:46.040215"
+    },
+    {
+      "rho": 0.0,
+      "seed": 456,
+      "preservation": 0.9375,
+      "effectiveness": 0.6857142857142857,
+      "specificity": 0.0,
+      "source_acc": 0.9083333333333333,
+      "target_acc": 0.9575,
+      "timestamp": "2025-07-29T15:19:32.594106"
+    },
+    {
+      "rho": 0.1,
+      "seed": 42,
+      "preservation": 0.936,
+      "effectiveness": 0.580952380952381,
+      "specificity": 0.0,
+      "source_acc": 0.9141666666666667,
+      "target_acc": 0.9541666666666667,
+      "timestamp": "2025-07-29T15:20:17.876355"
+    },
+    {
+      "rho": 0.1,
+      "seed": 123,
+      "preservation": 0.8306451612903226,
+      "effectiveness": 0.6095238095238096,
+      "specificity": 0.0,
+      "source_acc": 0.9183333333333333,
+      "target_acc": 0.9541666666666667,
+      "timestamp": "2025-07-29T15:21:04.169222"
+    },
+    {
+      "rho": 0.1,
+      "seed": 456,
+      "preservation": 1.0080645161290323,
+      "effectiveness": 0.580952380952381,
+      "specificity": 0.0,
+      "source_acc": 0.9041666666666667,
+      "target_acc": 0.9608333333333333,
+      "timestamp": "2025-07-29T15:21:49.308847"
+    },
+    {
+      "rho": 0.2,
+      "seed": 42,
+      "preservation": 0.624,
+      "effectiveness": 0.8095238095238095,
+      "specificity": 0.0,
+      "source_acc": 0.905,
+      "target_acc": 0.9591666666666666,
+      "timestamp": "2025-07-29T15:22:35.281220"
+    },
+    {
+      "rho": 0.2,
+      "seed": 123,
+      "preservation": 0.9920634920634921,
+      "effectiveness": 0.6761904761904762,
+      "specificity": 0.0,
+      "source_acc": 0.9025,
+      "target_acc": 0.9608333333333333,
+      "timestamp": "2025-07-29T15:23:19.850490"
+    },
+    {
+      "rho": 0.2,
+      "seed": 456,
+      "preservation": 0.9365079365079365,
+      "effectiveness": 0.5714285714285714,
+      "specificity": 0.0,
+      "source_acc": 0.91,
+      "target_acc": 0.9633333333333334,
+      "timestamp": "2025-07-29T15:24:03.946073"
+    },
+    {
+      "rho": 0.3,
+      "seed": 42,
+      "preservation": 0.9761904761904762,
+      "effectiveness": 0.638095238095238,
+      "specificity": 0.0,
+      "source_acc": 0.9158333333333334,
+      "target_acc": 0.9591666666666666,
+      "timestamp": "2025-07-29T15:24:48.346580"
+    },
+    {
+      "rho": 0.3,
+      "seed": 123,
+      "preservation": 0.7698412698412699,
+      "effectiveness": 0.6666666666666666,
+      "specificity": 0.0,
+      "source_acc": 0.9041666666666667,
+      "target_acc": 0.9658333333333333,
+      "timestamp": "2025-07-29T15:25:32.722302"
+    },
+    {
+      "rho": 0.3,
+      "seed": 456,
+      "preservation": 0.968503937007874,
+      "effectiveness": 0.5142857142857142,
+      "specificity": 0.0,
+      "source_acc": 0.9233333333333333,
+      "target_acc": 0.9591666666666666,
+      "timestamp": "2025-07-29T15:26:16.881744"
+    },
+    {
+      "rho": 0.4,
+      "seed": 42,
+      "preservation": 0.9047619047619048,
+      "effectiveness": 0.5904761904761905,
+      "specificity": 0.0,
+      "source_acc": 0.9058333333333334,
+      "target_acc": 0.96,
+      "timestamp": "2025-07-29T15:27:01.721340"
+    },
+    {
+      "rho": 0.4,
+      "seed": 123,
+      "preservation": 0.9916666666666667,
+      "effectiveness": 0.8,
+      "specificity": 0.0,
+      "source_acc": 0.9333333333333333,
+      "target_acc": 0.9425,
+      "timestamp": "2025-07-29T15:27:47.027443"
+    },
+    {
+      "rho": 0.4,
+      "seed": 456,
+      "preservation": 0.8888888888888888,
+      "effectiveness": 0.5142857142857142,
+      "specificity": 0.0,
+      "source_acc": 0.9016666666666666,
+      "target_acc": 0.9583333333333334,
+      "timestamp": "2025-07-29T15:43:52.285394"
+    },
+    {
+      "rho": 0.5,
+      "seed": 42,
+      "preservation": 0.959349593495935,
+      "effectiveness": 0.8666666666666667,
+      "specificity": 0.0,
+      "source_acc": 0.9283333333333333,
+      "target_acc": 0.9383333333333334,
+      "timestamp": "2025-07-29T15:59:23.492948"
+    },
+    {
+      "rho": 0.5,
+      "seed": 123,
+      "preservation": 0.952755905511811,
+      "effectiveness": 0.8857142857142857,
+      "specificity": 0.0,
+      "source_acc": 0.9141666666666667,
+      "target_acc": 0.97,
+      "timestamp": "2025-07-29T16:00:10.056386"
+    },
+    {
+      "rho": 0.5,
+      "seed": 456,
+      "preservation": 0.9919354838709677,
+      "effectiveness": 0.6476190476190476,
+      "specificity": 0.0,
+      "source_acc": 0.9175,
+      "target_acc": 0.9625,
+      "timestamp": "2025-07-29T16:00:56.565219"
+    },
+    {
+      "rho": 0.6,
+      "seed": 42,
+      "preservation": 1.0,
+      "effectiveness": 0.6952380952380952,
+      "specificity": 0.0,
+      "source_acc": 0.9,
+      "target_acc": 0.9558333333333333,
+      "timestamp": "2025-07-29T16:01:42.912053"
+    },
+    {
+      "rho": 0.6,
+      "seed": 123,
+      "preservation": 0.9444444444444444,
+      "effectiveness": 0.7238095238095238,
+      "specificity": 0.0,
+      "source_acc": 0.925,
+      "target_acc": 0.9516666666666667,
+      "timestamp": "2025-07-29T16:02:30.003078"
+    },
+    {
+      "rho": 0.6,
+      "seed": 456,
+      "preservation": 1.0,
+      "effectiveness": 0.8285714285714286,
+      "specificity": 0.0,
+      "source_acc": 0.9058333333333334,
+      "target_acc": 0.965,
+      "timestamp": "2025-07-29T16:03:16.212400"
+    },
+    {
+      "rho": 0.7,
+      "seed": 42,
+      "preservation": 0.9285714285714286,
+      "effectiveness": 0.8761904761904762,
+      "specificity": 0.0,
+      "source_acc": 0.905,
+      "target_acc": 0.9483333333333334,
+      "timestamp": "2025-07-29T16:04:02.184328"
+    },
+    {
+      "rho": 0.7,
+      "seed": 123,
+      "preservation": 0.928,
+      "effectiveness": 0.7904761904761904,
+      "specificity": 0.0,
+      "source_acc": 0.9208333333333333,
+      "target_acc": 0.9583333333333334,
+      "timestamp": "2025-07-29T16:04:48.819515"
+    },
+    {
+      "rho": 0.7,
+      "seed": 456,
+      "preservation": 0.9920634920634921,
+      "effectiveness": 0.6190476190476191,
+      "specificity": 0.0,
+      "source_acc": 0.9225,
+      "target_acc": 0.9616666666666667,
+      "timestamp": "2025-07-29T16:05:35.386684"
+    },
+    {
+      "rho": 0.8,
+      "seed": 42,
+      "preservation": 0.9609375,
+      "effectiveness": 0.6476190476190476,
+      "specificity": 0.0,
+      "source_acc": 0.9008333333333334,
+      "target_acc": 0.9608333333333333,
+      "timestamp": "2025-07-29T16:06:22.874523"
+    },
+    {
+      "rho": 0.8,
+      "seed": 123,
+      "preservation": 0.9590163934426229,
+      "effectiveness": 0.6190476190476191,
+      "specificity": 0.0,
+      "source_acc": 0.9116666666666666,
+      "target_acc": 0.9533333333333334,
+      "timestamp": "2025-07-29T16:07:10.037159"
+    },
+    {
+      "rho": 0.8,
+      "seed": 456,
+      "preservation": 0.6854838709677419,
+      "effectiveness": 0.7333333333333333,
+      "specificity": 0.0,
+      "source_acc": 0.91,
+      "target_acc": 0.945,
+      "timestamp": "2025-07-29T16:07:58.222792"
+    },
+    {
+      "rho": 0.9,
+      "seed": 42,
+      "preservation": 0.8467741935483871,
+      "effectiveness": 0.5047619047619047,
+      "specificity": 0.0,
+      "source_acc": 0.9316666666666666,
+      "target_acc": 0.9425,
+      "timestamp": "2025-07-29T16:08:46.919763"
+    },
+    {
+      "rho": 0.9,
+      "seed": 123,
+      "preservation": 0.8455284552845529,
+      "effectiveness": 0.5619047619047619,
+      "specificity": 0.0,
+      "source_acc": 0.905,
+      "target_acc": 0.9566666666666667,
+      "timestamp": "2025-07-29T16:09:36.338114"
+    },
+    {
+      "rho": 0.9,
+      "seed": 456,
+      "preservation": 0.9426229508196722,
+      "effectiveness": 0.6761904761904762,
+      "specificity": 0.0,
+      "source_acc": 0.9225,
+      "target_acc": 0.9341666666666667,
+      "timestamp": "2025-07-29T16:10:24.908897"
+    },
+    {
+      "rho": 1.0,
+      "seed": 42,
+      "preservation": 0.9596774193548387,
+      "effectiveness": 0.7142857142857143,
+      "specificity": 0.0,
+      "source_acc": 0.915,
+      "target_acc": 0.9575,
+      "timestamp": "2025-07-29T16:11:12.836016"
+    },
+    {
+      "rho": 1.0,
+      "seed": 123,
+      "preservation": 0.832,
+      "effectiveness": 0.8380952380952381,
+      "specificity": 0.0,
+      "source_acc": 0.9008333333333334,
+      "target_acc": 0.9575,
+      "timestamp": "2025-07-29T16:11:59.587808"
+    },
+    {
+      "rho": 1.0,
+      "seed": 456,
+      "preservation": 0.856,
+      "effectiveness": 0.5428571428571428,
+      "specificity": 0.0,
+      "source_acc": 0.9033333333333333,
+      "target_acc": 0.9458333333333333,
+      "timestamp": "2025-07-29T16:12:47.059464"
+    }
+  ]
+}

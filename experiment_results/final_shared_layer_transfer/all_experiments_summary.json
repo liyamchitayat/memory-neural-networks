@@ -1,0 +1,1564 @@
+{
+  "total_experiments": 30,
+  "experiments": [
+    {
+      "name": "transfer_digit_3",
+      "description": "[0,1,2], [2,3,4] -> transfer 3",
+      "network1_classes": [
+        0,
+        1,
+        2
+      ],
+      "network2_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "run_cross_arch": true
+    },
+    {
+      "name": "transfer_digit_5",
+      "description": "[0,1,2,3,4], [2,3,4,5,6] -> transfer 5",
+      "network1_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "network2_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "run_cross_arch": false
+    },
+    {
+      "name": "transfer_digit_8",
+      "description": "[0,1,2,3,4,5,6,7], [2,3,4,5,6,7,8,9] -> transfer 8",
+      "network1_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "network2_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "run_cross_arch": false
+    }
+  ],
+  "results": [
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9883333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.6633333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.99,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.022228734085842437,
+        "final_accuracy": 0.9937333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0016863406408094,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:35:55.205674"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9916666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.055
+      },
+      "after_metrics": {
+        "network1_on_original": 0.995,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.02623965252716309,
+        "final_accuracy": 0.9917333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0033613445378151,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:36:16.590659"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9883333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.475,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9883333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.027407141458034426,
+        "final_accuracy": 0.9916666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:36:38.145883"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9933333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.2966666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.995,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.025741191515789824,
+        "final_accuracy": 0.9914
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0016778523489933,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:36:59.979823"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9933333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.024267824536229863,
+        "final_accuracy": 0.9918
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0118845500848896,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:37:22.100714"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "DeepNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9833333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.02238116239280178,
+        "final_accuracy": 0.9923333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0016977928692699,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:37:44.224110"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "DeepNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.99,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.995,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.024985489842028842,
+        "final_accuracy": 0.9922666666666666
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.005050505050505,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:38:06.344514"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "DeepNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9866666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.045,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.99,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.027128254829692083,
+        "final_accuracy": 0.9914
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0033783783783783,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:38:28.342961"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "DeepNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9916666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9916666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.027006013423105386,
+        "final_accuracy": 0.9908666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:38:51.688486"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "WideNN",
+      "target_arch": "DeepNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9833333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.99,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.023658156004109865,
+        "final_accuracy": 0.9917333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0067796610169493,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:39:14.484260"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "WideNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9633333333333334,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9683333333333334,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04356660642555336,
+        "final_accuracy": 0.9844666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.005190311418685,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:39:36.535883"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "WideNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9716666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9933333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.041029474268337744,
+        "final_accuracy": 0.9867333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0222984562607202,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:39:58.561886"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "WideNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.935,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.15,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04780628929934152,
+        "final_accuracy": 0.9851333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.049910873440285,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:40:20.508281"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "WideNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9783333333333334,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.975,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.042981335699849826,
+        "final_accuracy": 0.9858
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 0.9965928449744462,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:40:42.990593"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "WideNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.975,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.03483653912409848,
+        "final_accuracy": 0.9884666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0068376068376068,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:41:05.666325"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "DeepNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.965,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9783333333333334,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04075304319885862,
+        "final_accuracy": 0.9846
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0138169257340244,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:41:28.063608"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "DeepNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9783333333333334,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 1.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.995,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.03592317565947074,
+        "final_accuracy": 0.9883333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0170357751277683,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:45:43.045907"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "DeepNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9566666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9766666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04217661392744316,
+        "final_accuracy": 0.9848
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0209059233449478,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:48:40.435238"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "DeepNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.97,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.3333333333333333,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.044736601335885307,
+        "final_accuracy": 0.9860666666666666
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0120274914089347,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:56:51.338183"
+    },
+    {
+      "experiment_name": "transfer_digit_3_cross_arch",
+      "source_arch": "DeepNN",
+      "target_arch": "DeepNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2
+      ],
+      "target_classes": [
+        2,
+        3,
+        4
+      ],
+      "transfer_digit": 3,
+      "untransferred_classes": [
+        4
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9716666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.9816666666666667,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.03884574187796075,
+        "final_accuracy": 0.9866
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0102915951972555,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:57:11.886485"
+    },
+    {
+      "experiment_name": "transfer_digit_5",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "untransferred_classes": [
+        6
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.98,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.365,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.979,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04959676071526693,
+        "final_accuracy": 0.9854666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 0.9989795918367347,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:57:33.363522"
+    },
+    {
+      "experiment_name": "transfer_digit_5",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "untransferred_classes": [
+        6
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.983,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.0,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.995
+      },
+      "after_metrics": {
+        "network1_on_original": 0.984,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.062062631021165965,
+        "final_accuracy": 0.9807333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0010172939979654,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:57:54.953313"
+    },
+    {
+      "experiment_name": "transfer_digit_5",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "untransferred_classes": [
+        6
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.983,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.007,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.58
+      },
+      "after_metrics": {
+        "network1_on_original": 0.98,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.04947573650537242,
+        "final_accuracy": 0.9846666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 0.9969481180061037,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:58:16.902931"
+    },
+    {
+      "experiment_name": "transfer_digit_5",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "untransferred_classes": [
+        6
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.98,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.12,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.985,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.052472660785938596,
+        "final_accuracy": 0.9843333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0051020408163265,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:58:38.751636"
+    },
+    {
+      "experiment_name": "transfer_digit_5",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "transfer_digit": 5,
+      "untransferred_classes": [
+        6
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.978,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.2,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.98,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.05296614001540255,
+        "final_accuracy": 0.9842666666666666
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0020449897750512,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:59:00.562768"
+    },
+    {
+      "experiment_name": "transfer_digit_8",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 42,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "untransferred_classes": [
+        9
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.9575,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.13,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.965,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.07283284534100225,
+        "final_accuracy": 0.9786666666666667
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0078328981723237,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:59:23.035292"
+    },
+    {
+      "experiment_name": "transfer_digit_8",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 123,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "untransferred_classes": [
+        9
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.951875,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.125,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.955625,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.06625024182286125,
+        "final_accuracy": 0.9795333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0039395929087327,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T19:59:45.538367"
+    },
+    {
+      "experiment_name": "transfer_digit_8",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 456,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "untransferred_classes": [
+        9
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.949375,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.115,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.95125,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.07662588280293998,
+        "final_accuracy": 0.9789333333333333
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.001974983541804,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T20:00:08.016047"
+    },
+    {
+      "experiment_name": "transfer_digit_8",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 789,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "untransferred_classes": [
+        9
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.94625,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.001875,
+        "network1_on_transferred": 0.915,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.94625,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.07139964356893076,
+        "final_accuracy": 0.9785333333333334
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T20:00:31.192631"
+    },
+    {
+      "experiment_name": "transfer_digit_8",
+      "source_arch": "WideNN",
+      "target_arch": "WideNN",
+      "seed": 101112,
+      "source_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_classes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "transfer_digit": 8,
+      "untransferred_classes": [
+        9
+      ],
+      "baseline_metrics": {
+        "network1_on_original": 0.956875,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "before_metrics": {
+        "network1_on_original": 0.125,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "after_metrics": {
+        "network1_on_original": 0.960625,
+        "network1_on_transferred": 0.0,
+        "network1_on_untransferred": 0.0
+      },
+      "transfer_training": {
+        "final_loss": 0.07366415045669376,
+        "final_accuracy": 0.9778
+      },
+      "improvements": {
+        "transferred_improvement": 0.0,
+        "original_retention": 1.0039190071848465,
+        "untransferred_change": 0.0
+      },
+      "timestamp": "2025-07-30T20:00:55.406419"
+    }
+  ],
+  "overall_statistics": {
+    "transfer_digit_3_cross_arch": {
+      "transferred_improvement": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "original_retention": {
+        "mean": 1.0095212114336145,
+        "std": 0.011561305357227797,
+        "min": 0.9965928449744462,
+        "max": 1.049910873440285,
+        "median": 1.0059849862178172
+      },
+      "untransferred_change": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "count": 20
+    },
+    "transfer_digit_5": {
+      "transferred_improvement": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "original_retention": {
+        "mean": 1.0008184068864363,
+        "std": 0.0027660064394471953,
+        "min": 0.9969481180061037,
+        "max": 1.0051020408163265,
+        "median": 1.0010172939979654
+      },
+      "untransferred_change": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "count": 5
+    },
+    "transfer_digit_8": {
+      "transferred_improvement": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "original_retention": {
+        "mean": 1.0035332963615413,
+        "std": 0.002596649667452137,
+        "min": 1.0,
+        "max": 1.0078328981723237,
+        "median": 1.0039190071848465
+      },
+      "untransferred_change": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      "count": 5
+    }
+  },
+  "timestamp": "2025-07-30T20:00:55.407737"
+}

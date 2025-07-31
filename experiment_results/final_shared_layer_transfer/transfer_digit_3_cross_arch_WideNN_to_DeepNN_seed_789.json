@@ -1,0 +1,45 @@
+{
+  "experiment_name": "transfer_digit_3_cross_arch",
+  "source_arch": "WideNN",
+  "target_arch": "DeepNN",
+  "seed": 789,
+  "source_classes": [
+    0,
+    1,
+    2
+  ],
+  "target_classes": [
+    2,
+    3,
+    4
+  ],
+  "transfer_digit": 3,
+  "untransferred_classes": [
+    4
+  ],
+  "baseline_metrics": {
+    "network1_on_original": 0.9916666666666667,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "before_metrics": {
+    "network1_on_original": 0.0,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "after_metrics": {
+    "network1_on_original": 0.9916666666666667,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "transfer_training": {
+    "final_loss": 0.027006013423105386,
+    "final_accuracy": 0.9908666666666667
+  },
+  "improvements": {
+    "transferred_improvement": 0.0,
+    "original_retention": 1.0,
+    "untransferred_change": 0.0
+  },
+  "timestamp": "2025-07-30T19:38:51.688486"
+}

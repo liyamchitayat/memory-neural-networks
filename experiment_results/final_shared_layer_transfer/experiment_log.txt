@@ -1,0 +1,40 @@
+[2025-07-30 19:06:25] 🚀 Starting Final Shared Layer Transfer Experiments
+[2025-07-30 19:06:25] Expected duration: ~3-4 hours (depends on hardware)
+[2025-07-30 19:06:25] Logging to: experiment_results/final_shared_layer_transfer/experiment_log.txt
+[2025-07-30 19:06:25] Executing: python final_shared_layer_experiment.py
+[2025-07-30 19:19:08] 🚀 Starting Final Shared Layer Transfer Experiments
+[2025-07-30 19:19:08] Expected duration: ~3-4 hours (depends on hardware)
+[2025-07-30 19:19:08] Logging to: experiment_results/final_shared_layer_transfer/experiment_log.txt
+[2025-07-30 19:19:08] Executing: python final_shared_layer_experiment.py
+[2025-07-30 19:28:44] ✅ Experiments completed successfully!
+[2025-07-30 19:28:44] 📊 Results Summary:
+[2025-07-30 19:28:44]   Transfer digit 3 experiments:       21
+[2025-07-30 19:28:44]   Transfer digit 5 experiments:        6
+[2025-07-30 19:28:44]   Transfer digit 8 experiments:        6
+[2025-07-30 19:28:44]   Total experiments: 33
+[2025-07-30 19:28:44] 📋 Generated summary files:
+[2025-07-30 19:28:44]   ✅ transfer_digit_3_summary.json
+[2025-07-30 19:28:44]   ✅ transfer_digit_5_summary.json
+[2025-07-30 19:28:44]   ✅ transfer_digit_8_summary.json
+[2025-07-30 19:28:44]   ✅ all_experiments_summary.json
+[2025-07-30 19:28:44] 🔍 Quick Analysis:
+[2025-07-30 19:28:44] 🎉 All experiments completed successfully!
+[2025-07-30 19:28:44] 📂 Results location: experiment_results/final_shared_layer_transfer
+[2025-07-30 19:35:33] 🚀 Starting Final Shared Layer Transfer Experiments
+[2025-07-30 19:35:33] Expected duration: ~3-4 hours (depends on hardware)
+[2025-07-30 19:35:33] Logging to: experiment_results/final_shared_layer_transfer/experiment_log.txt
+[2025-07-30 19:35:33] Executing: python final_shared_layer_experiment.py
+[2025-07-30 20:00:55] ✅ Experiments completed successfully!
+[2025-07-30 20:00:55] 📊 Results Summary:
+[2025-07-30 20:00:55]   Transfer digit 3 experiments:       21
+[2025-07-30 20:00:55]   Transfer digit 5 experiments:        6
+[2025-07-30 20:00:55]   Transfer digit 8 experiments:        6
+[2025-07-30 20:00:55]   Total experiments: 33
+[2025-07-30 20:00:55] 📋 Generated summary files:
+[2025-07-30 20:00:55]   ✅ transfer_digit_3_summary.json
+[2025-07-30 20:00:55]   ✅ transfer_digit_5_summary.json
+[2025-07-30 20:00:55]   ✅ transfer_digit_8_summary.json
+[2025-07-30 20:00:55]   ✅ all_experiments_summary.json
+[2025-07-30 20:00:55] 🔍 Quick Analysis:
+[2025-07-30 20:00:55] 🎉 All experiments completed successfully!
+[2025-07-30 20:00:55] 📂 Results location: experiment_results/final_shared_layer_transfer

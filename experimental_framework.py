@@ -138,19 +138,36 @@ class MNISTDataManager:
             root='./data', train=False, download=True, transform=self.transform)
     
     def create_class_subset(self, dataset, class_set: Set[int], max_samples_per_class: int = 1000) -> Subset:
-        """Create subset containing only specified classes."""
-        indices = []
-        class_counts = {c: 0 for c in class_set}
+        """Create subset containing only specified classes with random sampling."""
+        # First, collect all indices for each class
+        class_indices = {c: [] for c in class_set}
         
         for idx, (_, label) in enumerate(dataset):
-            if label in class_set and class_counts[label] < max_samples_per_class:
-                indices.append(idx)
-                class_counts[label] += 1
-                
-        logger.info(f"Created subset with {len(indices)} samples for classes {class_set}")
+            if label in class_set:
+                class_indices[label].append(idx)
+        
+        # Now randomly sample from each class using the current random state
+        final_indices = []
+        class_counts = {}
+        
+        for class_label in class_set:
+            available_indices = class_indices[class_label]
+            n_samples = min(max_samples_per_class, len(available_indices))
+            
+            # CRITICAL FIX: Random sampling instead of deterministic selection
+            if n_samples < len(available_indices):
+                # Use numpy's random state which respects the seed
+                selected_indices = np.random.choice(available_indices, size=n_samples, replace=False)
+            else:
+                selected_indices = available_indices
+            
+            final_indices.extend(selected_indices)
+            class_counts[class_label] = len(selected_indices)
+        
+        logger.info(f"Created subset with {len(final_indices)} samples for classes {class_set}")
         logger.info(f"Class distribution: {class_counts}")
         
-        return Subset(dataset, indices)
+        return Subset(dataset, final_indices)
     
     def get_data_loaders(self, source_classes: Set[int], target_classes: Set[int]) -> Tuple[DataLoader, DataLoader, DataLoader, DataLoader]:
         """Get data loaders for source and target classes."""

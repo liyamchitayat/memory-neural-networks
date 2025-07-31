@@ -1,0 +1,55 @@
+{
+  "experiment_name": "transfer_digit_8",
+  "source_arch": "WideNN",
+  "target_arch": "WideNN",
+  "seed": 42,
+  "source_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "target_classes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "transfer_digit": 8,
+  "untransferred_classes": [
+    9
+  ],
+  "baseline_metrics": {
+    "network1_on_original": 0.9575,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "before_metrics": {
+    "network1_on_original": 0.13,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "after_metrics": {
+    "network1_on_original": 0.965,
+    "network1_on_transferred": 0.0,
+    "network1_on_untransferred": 0.0
+  },
+  "transfer_training": {
+    "final_loss": 0.07283284534100225,
+    "final_accuracy": 0.9786666666666667
+  },
+  "improvements": {
+    "transferred_improvement": 0.0,
+    "original_retention": 1.0078328981723237,
+    "untransferred_change": 0.0
+  },
+  "timestamp": "2025-07-30T19:59:23.035292"
+}
