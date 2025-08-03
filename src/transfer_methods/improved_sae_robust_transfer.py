@@ -10,8 +10,11 @@ import torch.optim as optim
 import torch.nn.functional as F
 import numpy as np
 import logging
-from robust_balanced_transfer import RobustBalancedTransferSystem
-from corrected_metrics import CorrectedMetricsEvaluator
+from .robust_balanced_transfer import RobustBalancedTransferSystem
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+from src.evaluation.corrected_metrics import CorrectedMetricsEvaluator
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

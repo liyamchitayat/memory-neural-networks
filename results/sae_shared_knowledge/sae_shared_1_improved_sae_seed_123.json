@@ -1,0 +1,50 @@
+{
+  "experiment_id": "sae_shared_knowledge_1_improved_sae_seed_123",
+  "experiment_name": "SAE_1_shared_classes",
+  "approach": "improved_sae",
+  "seed": 123,
+  "timestamp": "2025-07-31T17:35:37.088260",
+  "experimental_setup": {
+    "source_classes": [
+      2,
+      3,
+      4
+    ],
+    "target_classes": [
+      0,
+      1,
+      2
+    ],
+    "shared_classes": [
+      2
+    ],
+    "transfer_class": 3,
+    "shared_knowledge_count": 1,
+    "total_knowledge_overlap_percentage": 20.0
+  },
+  "model_accuracies": {
+    "source": 0.9766666666666667,
+    "target": 0.99
+  },
+  "sae_shared_knowledge_results": {
+    "source_original_accuracy": 0.9766666666666667,
+    "source_transfer_class_accuracy": 0.99,
+    "source_specificity_class_accuracy": 0.99,
+    "target_before_original_accuracy": 0.99,
+    "target_before_transfer_class_accuracy": 0.0,
+    "target_before_specificity_class_accuracy": 0.0,
+    "target_after_original_accuracy": 0.33666666666666667,
+    "target_after_transfer_class_accuracy": 0.785,
+    "target_after_specificity_class_accuracy": 0.0
+  },
+  "success_criteria": {
+    "knowledge_preservation": false,
+    "transfer_effectiveness": true,
+    "transfer_specificity": true
+  },
+  "transfer_metrics": {
+    "effectiveness_improvement": 0.785,
+    "knowledge_preservation_score": 0.33666666666666667,
+    "specificity_score": 0.0
+  }
+}
